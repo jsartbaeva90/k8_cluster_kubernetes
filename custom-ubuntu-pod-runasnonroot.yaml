@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: custom-ubuntu-pod-runasnonroot
+spec:
+  securityContext:
+    runAsNonRoot: true
+  containers:
+  - image: ikambarov/custom-ubuntu:v2
+    name: custom-ubuntu
